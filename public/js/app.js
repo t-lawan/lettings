@@ -1885,10 +1885,8 @@ window.Vue = __webpack_require__(37);
 
 window.axios = __webpack_require__(11);
 
-window.axios.defaults.headers.common = {
-  'X-CSRF-TOKEN': window.Laravel.csrfToken,
-  'X-Requested-With': 'XMLHttpRequest'
-};
+window.axios.defaults.headers.common['X-CSRF-TOKEN'] = window.Laravel.csrfToken;
+window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 /**
  * Echo exposes an expressive API for subscribing to channels and listening
@@ -31654,7 +31652,7 @@ var Component = __webpack_require__(35)(
   /* cssModules */
   null
 )
-Component.options.__file = "/Users/thomaslawanson/Sites/flyer/resources/assets/js/components/Example.vue"
+Component.options.__file = "/Users/thomaslawanson/Sites/lettings/resources/assets/js/components/Example.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Example.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -31665,9 +31663,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-2f4b4912", Component.options)
+    hotAPI.createRecord("data-v-35f26508", Component.options)
   } else {
-    hotAPI.reload("data-v-2f4b4912", Component.options)
+    hotAPI.reload("data-v-35f26508", Component.options)
   }
 })()}
 
@@ -31756,7 +31754,7 @@ module.exports.render._withStripped = true
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-2f4b4912", module.exports)
+     require("vue-hot-reload-api").rerender("data-v-35f26508", module.exports)
   }
 }
 

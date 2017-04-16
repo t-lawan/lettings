@@ -14,7 +14,7 @@ class Photo extends Model
 
     protected $fillable = ['name','path','thumbnail_path'];
 
-    protected $baseDir = 'photos'
+    protected $baseDir = 'images/photos';
 
     public function flyer()
     {
@@ -36,25 +36,25 @@ class Photo extends Model
       $this->name = sprintf("%s-%s", time(), $name);
       // i.e. flyers/photos/{{photo_name}}
       $this->path = sprintf("%s/%s", $this->baseDir, $this->name);
-      // i.e. flyers/photos/tn{{photo_name}}
+      // i.e. photos/tn{{photo_name}}
       $this->thumbnail_path = sprintf("%s/tn-%s",$this->baseDir, $this->name);
 
       return $this;
 
     }
-    public function move(UploadedFile $file)
-    {
-      $file->move($this->baseDir, $name);
-
-      $this->makeThumbnail();
-
-
-
-      return $this;
-    }
-
     public function makeThumbnail()
     {
         Image::make($this->path)->fit(200)->save($this->thumbnail_path);
     }
+
+    public function move(UploadedFile $file)
+    {
+      $file->move($this->baseDir, $this->name);
+
+      $this->makeThumbnail();
+
+      return $this;
+    }
+
+
 }

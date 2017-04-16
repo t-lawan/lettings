@@ -10,8 +10,8 @@
 6 silly lifecycle @~predev: no script for predev, continuing
 7 info lifecycle @~dev: @
 8 verbose lifecycle @~dev: unsafe-perm in lifecycle true
-9 verbose lifecycle @~dev: PATH: /usr/local/lib/node_modules/npm/bin/node-gyp-bin:/Users/thomaslawanson/Sites/flyer/node_modules/.bin:/usr/local/bin:/usr/local/sbin:~/.composer/vendor/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin
-10 verbose lifecycle @~dev: CWD: /Users/thomaslawanson/Sites/flyer
+9 verbose lifecycle @~dev: PATH: /usr/local/lib/node_modules/npm/bin/node-gyp-bin:/Users/thomaslawanson/Sites/lettings/node_modules/.bin:/usr/local/bin:/usr/local/sbin:~/.composer/vendor/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin
+10 verbose lifecycle @~dev: CWD: /Users/thomaslawanson/Sites/lettings
 11 silly lifecycle @~dev: Args: [ '-c', 'npm run development' ]
 12 silly lifecycle @~dev: Returned: code: 1  signal: null
 13 info lifecycle @~dev: Failed to exec dev script
@@ -26,7 +26,7 @@
 14 verbose stack     at maybeClose (internal/child_process.js:890:16)
 14 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:226:5)
 15 verbose pkgid @
-16 verbose cwd /Users/thomaslawanson/Sites/flyer
+16 verbose cwd /Users/thomaslawanson/Sites/lettings
 17 error Darwin 16.4.0
 18 error argv "/usr/local/Cellar/node/7.5.0/bin/node" "/usr/local/bin/npm" "run" "dev"
 19 error node v7.5.0

@@ -15,10 +15,10 @@ class Flyer extends Model
 
     public static function locatedAt($post_code,$street)
     {
-      $post_code = str_replace(' ', '', $post_code);
+
       $street = str_replace('-', ' ', $street);
 
-      return static::where(compact('zip','street'))->first();
+      return static::where(compact('post_code','street'))->first();
     }
 
     public function addPhoto(Photo $photo)

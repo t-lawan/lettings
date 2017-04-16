@@ -5,15 +5,16 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
     static $password;
 
     return [
-        'name' => $faker->name,
-        'email' => $faker->unique()->safeEmail,
-        'password' => $password ?: $password = bcrypt('secret'),
+        'name' => 'Thomas',
+        'email' => 'thomas@email.com',
+        'password' => bcrypt('thomas'),
         'remember_token' => str_random(10),
     ];
 });
 
 $factory->define(App\Flyer::class, function (Faker\Generator $faker) {
     return [
+        'user_id' => 1,
         'street' => $faker->streetAddress,
         'city' => $faker->city,
         'state' => $faker->state,

@@ -22,7 +22,6 @@
 
     <!-- Left Side Of Navbar -->
     <ul class="nav navbar-nav">
-        <li><a href="/flyers/create"> Create</a></li>
 
     </ul>
 
@@ -34,6 +33,7 @@
           </a>
 
           <ul class="dropdown-menu" role="menu">
+              <li><a href="/flyers/create"> Create</a></li>
               <li>
                   <a href="{{ route('logout') }}"
                       onclick="event.preventDefault();
@@ -45,6 +45,7 @@
                       {{ csrf_field() }}
                   </form>
               </li>
+
           </ul>
       </li>
     </ul>

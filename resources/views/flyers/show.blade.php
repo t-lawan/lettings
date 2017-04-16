@@ -21,10 +21,11 @@
     {{$flyer->description}}
   </p>
 </div>
-
 <div class="row">
-
+  <h2>Photos</h2>
+  @include('photos.carousel')
 </div>
+
 
 <div class="row">
   <form action="/{{ $flyer->post_code }}/{{ $flyer->street}}/photos" method="post" class="dropzone" id="addPhotosForm">
