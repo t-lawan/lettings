@@ -12,5 +12,12 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('pages.home');
 });
+
+
+Route::resource('flyers','FlyersController');
+Route::get('{post_code}/{street}', 'FlyersController@show');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
