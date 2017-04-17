@@ -26,13 +26,13 @@
   @include('photos.carousel')
 </div>
 
-
+@if ($flyer->user_id === Auth::id())
 <div class="row">
   <form action="/{{ $flyer->post_code }}/{{ $flyer->street}}/photos" method="post" class="dropzone" id="addPhotosForm">
     {{ csrf_field() }}
   </form>
 </div>
-
+@endif
 
 @endsection
 

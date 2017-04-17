@@ -10,7 +10,7 @@ class Flyer extends Model
 {
     //
     protected $fillable = [
-      'street','city','state','post_code','country','price','description'
+      'user_id','street','city','state','post_code','country','price','description'
     ];
 
     public static function locatedAt($post_code,$street)

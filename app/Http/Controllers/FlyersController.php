@@ -56,7 +56,8 @@ class FlyersController extends Controller
     public function store(FlyerRequest $request)
     {
         //
-        Flyer::create($request->all());
+        $flyer = new Flyer($request->all());
+        auth()->user()->make($flyer);
 
         flash()->success('Success', 'Your flyer has been created');
 

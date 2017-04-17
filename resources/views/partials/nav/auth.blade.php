@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default col-md-10 col-md-offset-1">
 <div class="container">
   <div class="navbar-header">
 
