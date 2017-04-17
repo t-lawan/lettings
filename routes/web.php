@@ -18,7 +18,7 @@ Route::get('/', function () {
 
 Route::resource('flyers','FlyersController');
 Route::get('{post_code}/{street}', 'FlyersController@show');
-Route::post('{post_code}/{street}/photos', 'FlyersController@addPhoto');
+Route::post('{post_code}/{street}/photos', 'PhotosController@store');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');

@@ -27,7 +27,7 @@ class FlyersController extends Controller
      */
     public function index()
     {
-        
+
         $flyers = Flyer::all();
         return view('flyers.index', compact('flyers'));
 
@@ -76,36 +76,6 @@ class FlyersController extends Controller
         return view('flyers.show', compact('flyer'));
     }
 
-    public function addPhoto($post_code,$street,Request $request)
-    {
-
-      $this->validate($request,[
-        'photo' => 'required|mimes:jpg,jpeg,png,bmp'
-      ]);
-
-      $flyer = Flyer::locatedAt($post_code, $street);
-
-      if($flyer->user_id !== \Auth::id()) {
-        if($request->ajax())
-        {
-          return response(['No way, Jose'], 403);
-        }
-
-        flash()->success('Access Denied', 'This is not your photo');
-
-        return redirect('/');
-      }
-
-      $photo = $this->makePhoto($request->file('photo'));
-
-      Flyer::locatedAt($post_code,$street)->addPhoto($photo);
-
-    }
-
-    public function makePhoto(UploadedFile $file)
-    {
-          return Photo::named($file->getClientOriginalName())->move($file);
-    }
     /**
      * Show the form for editing the specified resource.
      *
