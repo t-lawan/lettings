@@ -10,24 +10,22 @@
     <h2> {{str_replace('-', ' ', $flyer->street)}}</h2>
     <h2> ${{$flyer->price}}</h2>
     <hr />
-    <p>
+    <p class="col-md-11">
       {{$flyer->description}}
     </p>
+
+
   </div>
   <div class="col-md-6">
     @include('photos.carousel')
+    <br>
+    <button type="button" class="btn btn-secondary btn-block" data-toggle="collapse" data-target="#addPhotoSection">Add Photo</button>
   </div>
 </div>
-<div class="container">
-  <button type="button" class="btn btn-secondary" data-toggle="collapse" data-target="#addPhotoSection">Simple collapsible</button>
 
-  <div id="addPhotoSection" class="collapse">
-  Lorem ipsum dolor text....
-  </div>
-</div>
 
 @if ($flyer->user_id === Auth::id())
-<div class="container">
+<div class="container collapse" id="addPhotoSection">
   <h4> Add Photos</h4>
   <form action="/{{ $flyer->post_code }}/{{ $flyer->street}}/photos" method="post" class="dropzone" id="addPhotosForm">
     {{ csrf_field() }}
