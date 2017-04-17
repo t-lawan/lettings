@@ -8,27 +8,24 @@
 <div class="container">
   <div class="col-md-6">
     <h2> {{str_replace('-', ' ', $flyer->street)}}</h2>
-  </div>
-
-  <div class="col-md-3 col-md-offset-3">
     <h2> ${{$flyer->price}}</h2>
+    <hr />
+    <p>
+      {{$flyer->description}}
+    </p>
   </div>
+  <div class="col-md-6">
+    @include('photos.carousel')
+  </div>
+</div>
+<div class="container">
+  <button type="button" class="btn btn-secondary" data-toggle="collapse" data-target="#addPhotoSection">Simple collapsible</button>
 
-</div>
-<hr />
-<div class="container">
-  <p>
-    {{$flyer->description}}
-  </p>
-</div>
-<div class="container">
-  <h2>Photos</h2>
+  <div id="addPhotoSection" class="collapse">
+  Lorem ipsum dolor text....
+  </div>
 </div>
 
-<div class="container">
-  @include('photos.display')
-</div>
-<br />
 @if ($flyer->user_id === Auth::id())
 <div class="container">
   <h4> Add Photos</h4>

@@ -2,9 +2,13 @@
 
   <div class="carousel-inner" role="listbox">
     @foreach ($flyer->photos as $photo)
-      
+      @if ($loop->first)
+      <div class="item active">
+        <img class="d-block img-fluid" src="/{{ $photo->path}}" alt="First slide" width="100%" height=" 100%">
+      </div>
+      @endif
     <div class="item">
-      <img class="d-block img-fluid" src="/{{ $photo->path}}" alt="First slide">
+      <img class="d-block img-fluid" src="/{{ $photo->path}}" alt="Slide" width="100%" height=" 100%">
     </div>
     @endforeach
 
