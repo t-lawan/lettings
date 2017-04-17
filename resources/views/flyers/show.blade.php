@@ -23,9 +23,12 @@
 </div>
 <div class="container">
   <h2>Photos</h2>
-  @include('photos.carousel')
 </div>
 
+<div class="container">
+  @include('photos.display')
+</div>
+<br />
 @if ($flyer->user_id === Auth::id())
 <div class="container">
   <h4> Add Photos</h4>
@@ -48,5 +51,6 @@
   };
 
 </script>
+
 
 @endsection
