@@ -5,9 +5,9 @@
 @endsection
 
 @section('content')
-<div class="row">
+<div class="container">
   <div class="col-md-6">
-    <h2> {{str_replace(' ', '-', $flyer->street)}}</h2>
+    <h2> {{str_replace('-', ' ', $flyer->street)}}</h2>
   </div>
 
   <div class="col-md-3 col-md-offset-3">
@@ -16,18 +16,19 @@
 
 </div>
 <hr />
-<div class="row">
+<div class="container">
   <p>
     {{$flyer->description}}
   </p>
 </div>
-<div class="row">
+<div class="container">
   <h2>Photos</h2>
   @include('photos.carousel')
 </div>
 
 @if ($flyer->user_id === Auth::id())
-<div class="row">
+<div class="container">
+  <h4> Add Photos</h4>
   <form action="/{{ $flyer->post_code }}/{{ $flyer->street}}/photos" method="post" class="dropzone" id="addPhotosForm">
     {{ csrf_field() }}
   </form>
