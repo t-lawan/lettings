@@ -60,7 +60,7 @@ class FlyersController extends Controller
 
         flash()->success('Success', 'Your flyer has been created');
 
-        return redirect()->back();
+        return redirect($flyer->post_code . '/' . str_replace(' ','-',$flyer->street));
     }
 
     /**

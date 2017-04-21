@@ -32,6 +32,13 @@ class PhotosController extends Controller
 
     }
 
+    public function destroy($id)
+    {
+      Photo::find($id)->delete();
+
+      return back();
+    }
+
     public function makePhoto(UploadedFile $file)
     {
           return Photo::named($file->getClientOriginalName())->move($file);

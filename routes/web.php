@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('pages.home');
+    return view('flyers.index');
 });
 
 
@@ -21,4 +21,4 @@ Route::get('{post_code}/{street}', 'FlyersController@show');
 Route::post('{post_code}/{street}/photos', 'PhotosController@store');
 Auth::routes();
 
-Route::get('/home', 'HomeController@index');
+Route::delete('photos/{id}', 'PhotosController@destroy');
