@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title> Flyer Project</title>
+  <title>Lettings</title>
   @include('partials.styles')
 
   @yield('scripts.header')
