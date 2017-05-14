@@ -39,7 +39,7 @@
 <div class="container-fluid">
   <div class="well" role="button" data-toggle="collapse" data-target="#seeMessage">
     Messages
-    @if(count($flyer->messages->read))
+    @if(count($flyer->messages))
       <span class="badge">4</span>
     @endif
   </div>
