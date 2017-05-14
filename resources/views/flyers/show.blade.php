@@ -58,6 +58,10 @@
 <div class="container-fluid collapse" id="addMessage">
   <div class="well well-lg ">
     <h4> Contact Owner</h4>
+    <p> Message</p>
+    <p> Email</p>
+    <p> Name</p>
+
   </div>
 
 </div>
