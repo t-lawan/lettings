@@ -14,27 +14,50 @@
     <p >
       {{$flyer->description}}
     </p>
+    <br>
+    @if ($flyer->user_id === Auth::id())
+    <button type="button" class="btn btn-secondary btn-block" data-toggle="collapse" data-target="#addPhotoSection">Add Photo</button>
+    @else
+    <button type="button" class="btn btn-secondary btn-block" data-toggle="collapse" data-target="#addMessage">Reply To Listing</button>
+
+    @endif
 
 
   </div>
 
   <div class="col-md-6">
     @include('photos.carousel')
-    <br>
-    @if ($flyer->user_id === Auth::id())
-    <button type="button" class="btn btn-secondary btn-block" data-toggle="collapse" data-target="#addPhotoSection">Add Photo</button>
-    @endif
+
   </div>
 </div>
 
 
 @if ($flyer->user_id === Auth::id())
-<div class="container collapse" id="addPhotoSection">
-  <h4> Add Photos</h4>
-  <form action="/{{ $flyer->post_code }}/{{ $flyer->street}}/photos" method="post" class="dropzone" id="addPhotosForm">
-    {{ csrf_field() }}
-  </form>
+<div class="container-fluid collapse" id="addPhotoSection">
+  <div class="well well-lg ">
+    <h4> Add Photos</h4>
+    <form action="/{{ $flyer->post_code }}/{{ $flyer->street}}/photos" method="post" class="dropzone" id="addPhotosForm">
+      {{ csrf_field() }}
+    </form>
+  </div>
 </div>
+<br />
+<div class="container-fluid">
+  <div class="well well-lg ">
+    <h4> Messages</h4>
+  </div>
+</div>
+
+
+
+@else
+<div class="container-fluid collapse" id="addMessage">
+  <div class="well well-lg ">
+    <h4> Contact Owner</h4>
+  </div>
+
+</div>
+
 @endif
 
 @endsection

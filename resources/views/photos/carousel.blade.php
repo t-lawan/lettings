@@ -1,3 +1,4 @@
+<div class="well well-lg ">
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
 
   <div class="carousel-inner" role="listbox">
@@ -44,4 +45,6 @@
     <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
+</div>
+
 </div>

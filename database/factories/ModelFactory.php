@@ -1,4 +1,5 @@
 <?php
+use App\Message;
 
 
 $factory->define(App\User::class, function (Faker\Generator $faker) {
@@ -24,7 +25,7 @@ $factory->define(App\Flyer::class, function (Faker\Generator $faker) {
         'description' => $faker->paragraph($nbSentences = 2, $variableNbSentences = true)
     ];
 });
-$baseDir = 'images/photos';
+
 
 $factory->define(App\Photo::class, function (Faker\Generator $faker) {
     return [
@@ -32,5 +33,15 @@ $factory->define(App\Photo::class, function (Faker\Generator $faker) {
         'name' => $faker->word,
         'path' => $faker->imageURL(640, 360, 'city'),
         'thumbnail_path' => $faker->imageURL(200, 200, 'city'),
+    ];
+});
+
+$factory->define(App\Message::class, function (Faker\Generator $faker) {
+    return [
+        'flyer_id' => rand(1,5),
+        'body' => $faker->text,
+        'name' => $faker->name,
+        'email' => $faker->safeEmail,
+        'read' => rand(0,1)
     ];
 });

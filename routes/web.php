@@ -12,11 +12,11 @@
 */
 
 Route::get('/', function () {
-    return redirect('/flyers');
+    return redirect('/listings');
 });
 
 
-Route::resource('flyers','FlyersController');
+Route::resource('listings','FlyersController');
 Route::get('{post_code}/{street}', 'FlyersController@show');
 Route::post('{post_code}/{street}/photos', 'PhotosController@store');
 Auth::routes();

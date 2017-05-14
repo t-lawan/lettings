@@ -13,8 +13,8 @@
 
 
     <!-- Branding Image -->
-    <a class="navbar-brand" href="/flyers">
-        {{ config('app.name', 'Estate') }}
+    <a class="navbar-brand" href="/listings">
+        {{ config('app.name', 'Lettings') }}
     </a>
   </div>
 
@@ -33,7 +33,7 @@
           </a>
 
           <ul class="dropdown-menu" role="menu">
-              <li><a href="/flyers/create"> Create</a></li>
+              <li><a href="/listings/create"> Create</a></li>
               <li>
                   <a href="{{ route('logout') }}"
                       onclick="event.preventDefault();

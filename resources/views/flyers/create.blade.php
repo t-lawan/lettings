@@ -3,7 +3,7 @@
 @section('content')
   <h2 class="text-center"> Selling your home?</h2>
 
-  <hr />
+  <br />
 
 
     <form method="post" action="/flyers" enctype="multipart/form-data" class="col-md-6 col-md-offset-3">

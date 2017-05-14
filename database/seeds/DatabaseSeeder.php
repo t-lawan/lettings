@@ -10,7 +10,7 @@ class DatabaseSeeder extends Seeder
      * @return void
      */
 
-    protected $toTruncate = array('users','photos','flyers');
+    protected $toTruncate = array('photos','flyers','users','messages');
 
     public function run()
     {
@@ -22,5 +22,6 @@ class DatabaseSeeder extends Seeder
          $this->call(UsersTableSeeder::class);
          $this->call(FlyersTableSeeder::class);
          $this->call(PhotosTableSeeder::class);
+         $this->call(MessagesTableSeeder::class);
     }
 }
