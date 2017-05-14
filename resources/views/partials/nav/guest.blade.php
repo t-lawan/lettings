@@ -1,36 +1,37 @@
-<nav class="navbar navbar-default col-md-10 col-md-offset-1">
-    <div class="container">
-        <div class="navbar-header">
 
-            <!-- Collapsed Hamburger -->
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
-                <span class="sr-only">Toggle Navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
+  <nav class="navbar navbar-default ">
+      <div class="container-fluid">
+          <div class="navbar-header">
 
-            <!-- Branding Image -->
-            <a class="navbar-brand" href="/listings">
-                {{ config('app.name', 'Lettings') }}
-            </a>
-        </div>
+              <!-- Collapsed Hamburger -->
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
+                  <span class="sr-only">Toggle Navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+              </button>
 
-        <div class="collapse navbar-collapse" id="app-navbar-collapse">
-            <!-- Left Side Of Navbar -->
-            <ul class="nav navbar-nav">
+              <!-- Branding Image -->
+              <a class="navbar-brand" href="/listings">
+                  {{ config('app.name', 'Lettings') }}
+              </a>
+          </div>
+
+          <div class="collapse navbar-collapse" id="app-navbar-collapse">
+              <!-- Left Side Of Navbar -->
+              <ul class="nav navbar-nav">
 
 
-            </ul>
+              </ul>
 
-            <!-- Right Side Of Navbar -->
-            <ul class="nav navbar-nav navbar-right">
-                <!-- Authentication Links -->
+              <!-- Right Side Of Navbar -->
+              <ul class="nav navbar-nav navbar-right">
+                  <!-- Authentication Links -->
 
-                    <li><a href="{{ route('login') }}">Login</a></li>
-                    <li><a href="{{ route('register') }}">Register</a></li>
+                      <li><a href="{{ route('login') }}">Login</a></li>
+                      <li><a href="{{ route('register') }}">Register</a></li>
 
-            </ul>
-        </div>
-    </div>
-</nav>
+              </ul>
+          </div>
+      </div>
+  </nav>

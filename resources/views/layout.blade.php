@@ -7,12 +7,15 @@
   @yield('scripts.header')
 </head>
 <body>
-<div class="container-fluid">
-  @if (Auth::guest())
-    @include('partials.nav.guest')
-  @else
-    @include('partials.nav.auth')
-  @endif
+<div class="container">
+  <div class="col-xs-10 col-xs-offset-1">
+    @if (Auth::guest())
+      @include('partials.nav.guest')
+    @else
+      @include('partials.nav.auth')
+    @endif
+  </div>
+
 </div>
 
 
