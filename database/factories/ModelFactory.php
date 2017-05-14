@@ -21,6 +21,6 @@ $factory->define(App\Flyer::class, function (Faker\Generator $faker) {
         'post_code' => $faker->postcode,
         'country' => $faker->country,
         'price' => $faker->numberBetween(10000,50000),
-        'description' => $faker->paragraph($nbSentences = 2$, $variableNbSentences = true)
+        'description' => $faker->paragraph($nbSentences = 2, $variableNbSentences = true)
     ];
 });
