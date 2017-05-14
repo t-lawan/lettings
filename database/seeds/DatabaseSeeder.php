@@ -10,13 +10,17 @@ class DatabaseSeeder extends Seeder
      * @return void
      */
 
-    protected $toTruncate = array('users','flyer_photos','flyers');
+    protected $toTruncate = array('users','photos','flyers');
 
     public function run()
     {
-
+      foreach ($this->toTruncate as $table)
+        {
+          DB::table($table)->truncate();
+        }
 
          $this->call(UsersTableSeeder::class);
          $this->call(FlyersTableSeeder::class);
+         $this->call(PhotosTableSeeder::class);
     }
 }

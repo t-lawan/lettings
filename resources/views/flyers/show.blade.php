@@ -5,21 +5,25 @@
 @endsection
 
 @section('content')
-<div class="container">
-  <div class="col-md-6">
+<div class="container-fluid">
+
+  <div class="well well-lg col-md-6">
     <h2> {{str_replace('-', ' ', $flyer->street)}}</h2>
     <h2> ${{$flyer->price}}</h2>
-    <hr />
-    <p class="col-md-11">
+
+    <p >
       {{$flyer->description}}
     </p>
 
 
   </div>
+
   <div class="col-md-6">
     @include('photos.carousel')
     <br>
+    @if ($flyer->user_id === Auth::id())
     <button type="button" class="btn btn-secondary btn-block" data-toggle="collapse" data-target="#addPhotoSection">Add Photo</button>
+    @endif
   </div>
 </div>
 

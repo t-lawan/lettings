@@ -24,3 +24,13 @@ $factory->define(App\Flyer::class, function (Faker\Generator $faker) {
         'description' => $faker->paragraph($nbSentences = 2, $variableNbSentences = true)
     ];
 });
+$baseDir = 'images/photos';
+
+$factory->define(App\Photo::class, function (Faker\Generator $faker) {
+    return [
+        'flyer_id' => rand(1,5),
+        'name' => $faker->word,
+        'path' => $faker->imageURL(640, 360, 'city'),
+        'thumbnail_path' => $faker->imageURL(200, 200, 'city'),
+    ];
+});
