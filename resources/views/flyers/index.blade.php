@@ -4,7 +4,7 @@
 <div>
   <div class="panel panel-default">
     <div class="panel-heading">Listings</div>
-    
+
   </div>
 
 </div>

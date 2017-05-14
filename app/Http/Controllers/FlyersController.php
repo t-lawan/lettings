@@ -41,7 +41,6 @@ class FlyersController extends Controller
     public function create()
     {
         //
-        flash()->info('Create a listing', 'Please enter your details in the form to create the listing');
 
         return view('flyers.create');
     }
