@@ -2,7 +2,11 @@
   <div class="panel panel-default">
     <div class="panel-heading">
       <a href="/{{$flyer->post_code}}/{{$flyer->street}}">
-        <h3 class="panel-title">{{$flyer->street}}
+        <h3 class="panel-title">
+          {{$flyer->street}}
+          @if(count($flyer->messages))
+          <span class="badge">4</span>
+          @endif
         </h3>
       </a>
 

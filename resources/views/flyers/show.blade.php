@@ -27,31 +27,25 @@
 
   <div class="col-md-6">
     @include('photos.carousel')
-
   </div>
 </div>
 
 
 @if ($flyer->user_id === Auth::id())
 <div class="container-fluid collapse" id="addPhotoSection">
-  <div class="well well-lg ">
-    <h4> Add Photos</h4>
-    <form action="/{{ $flyer->post_code }}/{{ $flyer->street}}/photos" method="post" class="dropzone" id="addPhotosForm">
-      {{ csrf_field() }}
-    </form>
-  </div>
+  @include('photos.add')
 </div>
 <br />
 <div class="container-fluid">
   <div class="well" role="button" data-toggle="collapse" data-target="#seeMessage">
     Messages
+    @if(count($flyer->messages->read))
+      <span class="badge">4</span>
+    @endif
   </div>
   <div id="seeMessage" class="collapse">
   @foreach($flyer->messages as $message)
-    <div class="well well-lg ">
-      <p>{{$message->name}} - {{$message->email}}</p>
-      <p> {{$message->body}}</p>
-    </div>
+    @include('messages.partials.message')
   @endforeach
 
   </div>

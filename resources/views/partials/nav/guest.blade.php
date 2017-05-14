@@ -11,8 +11,8 @@
             </button>
 
             <!-- Branding Image -->
-            <a class="navbar-brand" href="/flyers">
-                {{ config('app.name', 'Estate') }}
+            <a class="navbar-brand" href="/listings">
+                {{ config('app.name', 'Lettings') }}
             </a>
         </div>
 
