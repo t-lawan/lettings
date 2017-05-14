@@ -43,9 +43,20 @@
 </div>
 <br />
 <div class="container-fluid">
-  <div class="well well-lg ">
-    <h4> Messages</h4>
+  <div class="well" role="button" data-toggle="collapse" data-target="#seeMessage">
+    Messages
   </div>
+  <div id="seeMessage" class="collapse">
+  @foreach($flyer->messages as $message)
+    <div class="well well-lg ">
+      <p>{{$message->name}} - {{$message->email}}</p>
+      <p> {{$message->body}}</p>
+    </div>
+  @endforeach
+
+  </div>
+
+
 </div>
 
 

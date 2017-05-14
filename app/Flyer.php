@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use App\Photo;
+use App\Message;
 use App\User;
 
 class Flyer extends Model
@@ -29,6 +30,11 @@ class Flyer extends Model
     public function photos()
     {
       return $this->hasMany(Photo::class);
+    }
+
+    public function messages()
+    {
+      return $this->hasMany(Message::class);
     }
 
     public function user()
