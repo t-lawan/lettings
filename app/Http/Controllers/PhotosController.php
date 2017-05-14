@@ -11,12 +11,13 @@ use Symfony\Component\HttpFoundation\File\UploadedFile;
 class PhotosController extends Controller
 {
     //
-    public function store($post_code,$street,PhotoRequest $request)
+    public function store($post_code, $street,PhotoRequest $request)
     {
 
       $flyer = Flyer::locatedAt($post_code, $street);
 
-      if($flyer->user_id !== \Auth::id()) {
+      if($flyer->user_id !== \Auth::id())
+      {
         if($request->ajax())
         {
           return response(['No way, Jose'], 403);
@@ -35,7 +36,6 @@ class PhotosController extends Controller
     public function destroy($id)
     {
       Photo::find($id)->delete();
-
       return back();
     }
 

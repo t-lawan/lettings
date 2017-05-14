@@ -10,7 +10,6 @@ use Symfony\Component\HttpFoundation\File\UploadedFile;
 class Photo extends Model
 {
     //
-    protected $table = 'flyer_photos';
 
     protected $fillable = ['name','path','thumbnail_path'];
 
@@ -40,7 +39,6 @@ class Photo extends Model
       $this->thumbnail_path = sprintf("%s/tn-%s",$this->baseDir, $this->name);
 
       return $this;
-
     }
     public function makeThumbnail()
     {
