@@ -2,19 +2,16 @@
 
 use Illuminate\Database\Seeder;
 
-class DatabaseSeeder extends Seeder
+class FlyersTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
      *
      * @return void
      */
-
-
-
     public function run()
     {
-         $this->call(UsersTableSeeder::class);
-         $this->call(FlyersTableSeeder::class);
+        //
+        factory('App\Flyer', 5)->create();
     }
 }

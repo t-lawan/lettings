@@ -5,8 +5,8 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
     static $password;
 
     return [
-        'name' => 'Thomas',
-        'email' => 'thomas@email.com',
+        'name' => $faker->name,
+        'email' => $faker->freeEmail,
         'password' => bcrypt('thomas'),
         'remember_token' => str_random(10),
     ];
@@ -14,7 +14,7 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
 
 $factory->define(App\Flyer::class, function (Faker\Generator $faker) {
     return [
-        'user_id' => 1,
+        'user_id' => rand(1,2),
         'street' => $faker->streetAddress,
         'city' => $faker->city,
         'state' => $faker->state,
