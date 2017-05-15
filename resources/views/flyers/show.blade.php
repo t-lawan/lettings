@@ -6,23 +6,28 @@
 
 @section('content')
 <div class="container-fluid">
+  <div class="col-md-6">
+    <div class="well well-lg">
+      <h2> {{str_replace('-', ' ', $flyer->street)}}: ${{$flyer->price}}</h2>
 
-  <div class="well well-lg col-md-6">
-    <h2> {{str_replace('-', ' ', $flyer->street)}}: ${{$flyer->price}}</h2>
+      <p >
+        {{$flyer->description}}
+      </p>
+      <br>
+      @if ($flyer->user_id === Auth::id())
+      <button type="button" class="btn btn-secondary btn-block" data-toggle="collapse" data-target="#addPhotoSection">Add Photo</button>
+      @else
+      <button type="button" class="btn btn-secondary btn-block" data-toggle="collapse" data-target="#addMessage">Reply To Listing</button>
 
-    <p >
-      {{$flyer->description}}
-    </p>
-    <br>
-    @if ($flyer->user_id === Auth::id())
-    <button type="button" class="btn btn-secondary btn-block" data-toggle="collapse" data-target="#addPhotoSection">Add Photo</button>
-    @else
-    <button type="button" class="btn btn-secondary btn-block" data-toggle="collapse" data-target="#addMessage">Reply To Listing</button>
-
-    @endif
+      @endif
 
 
+    </div>
+    <div class="well well-sm">
+      <h4>Advert</h4>
+    </div>
   </div>
+
 
   <div class="col-md-6">
     @include('photos.carousel')
