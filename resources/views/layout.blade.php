@@ -1,11 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html lang="{{ config('app.locale') }}">
 <head>
-  <title>Lettings</title>
-  @include('partials.styles')
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  @yield('scripts.header')
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
+    <title>Lettings</title>
+
+    <!-- Styles -->
+    @include('partials.styles')
+    <!-- Scripts -->
+    @yield('scripts.header')
+    <script>
+        window.Laravel = {!! json_encode([
+            'csrfToken' => csrf_token(),
+        ]) !!};
+    </script>
 </head>
+
 <body>
 <div class="container">
   <div class="col-xs-10 col-xs-offset-1">
